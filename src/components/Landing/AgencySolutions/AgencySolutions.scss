@@ -1,0 +1,95 @@
+@import '../../../App.scss';
+
+#agency-solutions{
+    background:$primaryColor;
+    color:#fff;
+    background: url(/assets/agency-organization/agency-org-bg.jpg) center center no-repeat/cover;
+    .agency-solutions{
+        padding: 4rem;
+        h1{
+            text-align: center;
+            padding: 1rem;
+        }
+        p{
+            text-align: center;
+            padding: .5rem;
+            font-weight: 900;
+            color: #d3d3d3;
+            letter-spacing: .3rem;
+            text-shadow: 3px 2px 3px $primaryColor;
+        }
+        span{
+            border-bottom: 1px solid $secondaryColor;
+        }
+    }
+    .agency-solutions-grid{
+        display:grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(3,1fr);
+        .agency-solutions-grid-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 1rem;
+            border: 1px dashed #fff;
+            min-height: 250px;
+            margin: 1rem;
+            background: rgba(0, 0, 0, .3);
+            height: 260px;
+            i{
+                padding: .75rem;
+                color: $secondaryColor;
+            }
+            h3{
+                padding: .75rem;
+                // color: $primaryColor;
+                font-weight: bold;
+            }
+            p{
+                font-weight: normal;
+                color: #d3ddd3;
+                text-shadow: none;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
+@media only screen and (max-width:1280px){
+
+}
+@media only screen and (max-width:960px){
+    .agency-solutions-grid{
+        grid-template-columns: repeat(2,1fr) !important;
+    }
+}
+@media only screen and (max-width:768px){
+    #agency-solutions{
+        background: url(/assets/agency-organization/agency-org-bg1.jpg) center center no-repeat/cover;
+        .agency-solutions{
+            p{
+                color: $secondaryColor;
+            }
+        }
+    }
+    .agency-solutions-grid{
+        grid-template-columns: 1fr !important;
+        p{
+            color: #d3ddd3 !important;
+        }
+    }
+}
+@media only screen and (max-width:480px){
+    .agency-solutions{
+        padding: 2rem !important;
+        h1{
+            font-size: 1.3rem;
+        }
+        .agency-solutions-grid-item{
+            min-height: auto !important;
+            height: auto !important;
+        }
+    }
+}

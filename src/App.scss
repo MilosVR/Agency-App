@@ -1,0 +1,95 @@
+
+$primaryColor:#1f365c;
+$secondaryColor:rgb(255, 181, 54);
+$ternaryColor:#f71735;
+$btnSuccess:#4CAF50;
+$body-font-family:'Roboto', sans-serif;
+
+body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+*{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.container{
+  margin: 0 auto;
+  width: 1280px;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.flex-centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin btnTransition() {
+  transition: all 500ms ease-in-out;
+  opacity: .8;
+}
+h1, h2, h3, h4, h5, h6, p{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+ul{
+  padding: 0;
+  margin: 0;
+  li{
+    list-style: none;
+  }
+}
+a{
+  text-decoration: none;
+}
+input{
+  outline: none;
+  border-radius: .5rem;
+  border: 1px solid #d3d3d3;
+  padding: .35rem .4rem;
+}
+button{
+  outline: none;
+  border:none;
+  padding: .4rem 1.7rem;
+  border-radius: .2rem;
+  margin: .2rem;
+  cursor: pointer;
+  &.primary{
+    background: $primaryColor;
+    color: #fff;
+    &:hover{
+      @include btnTransition;
+    }
+  }
+  &.danger{
+    background: $ternaryColor;
+    color: #fff;
+    &:hover{
+      @include btnTransition;
+    }
+  }
+  &.success{
+    background: $btnSuccess;
+    color: #fff;
+    &:hover{
+      @include btnTransition;
+    }
+  }
+  &.warning{
+    background: $secondaryColor;
+    color: #fff;
+    &:hover{
+      @include btnTransition;
+    }
+  }
+}
