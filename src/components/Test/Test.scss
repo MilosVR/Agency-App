@@ -1,0 +1,22 @@
+@import '../../App.scss';
+
+.test-todos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ 
+    .test-todo-item{
+        border-bottom: 1px solid #333;
+        padding: 1rem ;
+        min-width: 300px;
+        margin: .5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .test-todo-item-delete{
+            color: red;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}
